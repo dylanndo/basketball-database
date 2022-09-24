@@ -17,5 +17,6 @@ with open('shots_data.csv', 'r') as file:
             players.get(name).addShot(row)
 
 for x in players:
-    print("Stats for " + players.get(x) + ":")
+    print("Stats for " + x + ":")
     players.get(x).printStats()
+    print()
