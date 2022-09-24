@@ -83,7 +83,7 @@ class Player():
                     self.made += 1    
                 
                 self.updateZones() # update zones after new shot attempt
-                self.eFGpNC3 = Stats_Calculator.update3EFGP(self.madeNC3, self.attempted)   # update NC3 EFG%
+                self.eFGpNC3 = Stats_Calculator.update3EFGP(self.madeNC3, self.attemptedNC3)   # update NC3 EFG%
 
                 self.nonCornerThree.append(row)    # add data to non corner 3 list
     
