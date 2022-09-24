@@ -1,11 +1,11 @@
 class Stats_Calculator():
     # calculates percentage of shots attempted in zone
-    def updateZone(player, zoneAttempted):
-        return zoneAttempted / (player.attempted2PT + player.attemptedC3 + player.attemptedNC3)
+    def updateZone(zoneAttempted, totalAttempted):
+        return float(zoneAttempted) / totalAttempted
 
     # calculates effective field goal percentage in given 2 pt zone
     def updateEFGP(madeShots, attemptedShots):
-        return madeShots / attemptedShots
+        return float(madeShots) / attemptedShots
 
     # calculates effective field goal percentage in given 3 pt zone
     def update3EFGP(madeShots, attemptedShots):
