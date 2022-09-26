@@ -11,7 +11,7 @@ with open('shots_data.csv', 'r') as file:
     csvreader = csv.reader(file)
     header = next(csvreader)
     for row in csvreader:
-        name = row[0]
+        name = row[0].lower()
         if name in players:   #if player is in database already
             players.get(name).addShot(row)
         else:   #otherwise add player first then add stats
@@ -21,7 +21,7 @@ with open('shots_data.csv', 'r') as file:
 
 while(userInput.lower() != "done" and menuOption != 6):
     print()
-    userInput = input("Who's statistics would you like to access? (Type 'done' to exit) ")
+    userInput = input("Who's statistics would you like to access? (Type 'done' to exit): ").lower()
     print()
     
     if userInput in players:
@@ -77,6 +77,8 @@ while(userInput.lower() != "done" and menuOption != 6):
                 Menu.printAllEFGp(players[userInput])
 
         elif menuOption == 4:
+            print()
+            print("Statistics for " + userInput + ":")
             Menu.printAllFGp(players[userInput])
             print()
             Menu.printAllZones(players[userInput])
@@ -85,7 +87,10 @@ while(userInput.lower() != "done" and menuOption != 6):
             print()
 
         elif menuOption == 5:
-            break            
+            print()
+            
+        elif menuOption == 6:
+            break
             
     else:
         print("This player is not in the database.")
