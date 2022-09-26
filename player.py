@@ -151,14 +151,3 @@ class Player():
 
     def getEFGp(self):
         return self.eFGp
-        
-
-
-    # prints calculated percentages for each zone
-    def printStats(self):
-        print("Percentage of shots attempted in 2PT Zone: " + str(self.zone2PT))
-        print("Percentage of shots attempted in NC3 Zone: " + str(self.zoneNC3))
-        print("Percentage of shots attempted in C3 Zone: " + str(self.zoneC3))
-        print("Effective FG Percentage in 2PT Zone: " + str(self.eFGp2PT))
-        print("Effective FG Percentage in NC3 Zone: " + str(self.eFGpNC3))
-        print("Effective FG Percentage in C3 Zone: " + str(self.eFGpC3))
