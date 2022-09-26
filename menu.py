@@ -44,7 +44,7 @@ class Menu():
     def printFGp(player):
         print("Field goal percentage (overall): " + str(player.getFGp()))
 
-    def printAllFGp(self, player):
+    def printAllFGp(player):
         Menu.printFGp2PT(player)
         Menu.printFGp3PT(player)
         Menu.printFGpC3(player)
