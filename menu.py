@@ -6,7 +6,7 @@ class Menu():
         print("1) Access Player Stats")
         print("2) List players in Database")
         print("3) Quit")
-        return int(input("Please enter a number to get started: "))
+        return input("Please enter a number to get started: ")
     
     # ask user what stat they would like to access
     def playerStatsScreen():
