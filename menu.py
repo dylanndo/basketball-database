@@ -45,11 +45,11 @@ class Menu():
         print("Field goal percentage (overall): " + str(player.getFGp()))
 
     def printAllFGp(self, player):
-        self.printFGp2PT(player)
-        self.printFGp3PT(player)
-        self.printFGpC3(player)
-        self.printFGpNC3(player)
-        self.printFGp(player)
+        Menu.printFGp2PT(player)
+        Menu.printFGp3PT(player)
+        Menu.printFGpC3(player)
+        Menu.printFGpNC3(player)
+        Menu.printFGp(player)
 
     # prints attempted zone percentage
     def printZone2PT(player):
@@ -61,11 +61,11 @@ class Menu():
     def printZoneNC3(player):
         print("Percentage of shots attempted in NC3 Zone: " + str(player.getZoneNC3()))
 
-    def printAllZones(self, player):
-        self.printZone2PT(player)
-        self.printZone3PT(player)
-        self.printZoneC3(player)
-        self.printZoneNC3(player)
+    def printAllZones(player):
+        Menu.printZone2PT(player)
+        Menu.printZone3PT(player)
+        Menu.printZoneC3(player)
+        Menu.printZoneNC3(player)
 
     # prints effective field goal percentage
     def printEFGp2PT(player):
