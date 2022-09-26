@@ -1,3 +1,4 @@
+from pstats import Stats
 from stats_calculator import Stats_Calculator
 
 class Player():
@@ -37,7 +38,7 @@ class Player():
 
         # effective field goal percentage
         self.eFGp2PT = 0.0
-        self.eFGp3PT = 0.0    #C3 + NC3
+        self.eFGp3PT = 0.0
         self.eFGpC3 = 0.0
         self.eFGpNC3 = 0.0
         self.eFGp = 0.0
@@ -74,6 +75,7 @@ class Player():
 
                 self.updateZones() # update zones after new shot attempt
                 self.eFGpC3 = Stats_Calculator.update3EFGP(self.madeC3, self.attemptedC3)   # update C3 EFG%
+                self.eFGp3PT = Stats_Calculator.update3EFGP(self.made3PT, self.attempted3PT)    # update 3PT EFG%
                 self.eFGp = Stats_Calculator.updateEFGP(self.made, self.made3PT, self.attempted)    # update overall EFG%
                 self.fgpC3 = Stats_Calculator.updateFGP(self.madeC3, self.attemptedC3)   # update C3 FG%
                 self.fgp3PT = Stats_Calculator.updateFGP(self.made3PT, self.attempted3PT)   # update 3PT FG%
@@ -110,6 +112,7 @@ class Player():
                 
                 self.updateZones() # update zones after new shot attempt
                 self.eFGpNC3 = Stats_Calculator.update3EFGP(self.madeNC3, self.attemptedNC3)   # update NC3 EFG%
+                self.eFGp3PT = Stats_Calculator.update3EFGP(self.made3PT, self.attempted3PT)    # update 3PT EFG%
                 self.eFGp = Stats_Calculator.updateEFGP(self.made, self.made3PT, self.attempted)    # update overall EFG%
                 self.fgpNC3 = Stats_Calculator.updateFGP(self.madeNC3, self.attemptedNC3)   # update NC3 FG%
                 self.fgp3PT = Stats_Calculator.updateFGP(self.made3PT, self.attempted3PT)   # update 3PT FG%
