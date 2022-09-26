@@ -20,13 +20,16 @@ with open('shots_data.csv', 'r') as file:
             players.get(name).addShot(row)
 
 while(userInput.lower() != "done" and menuOption != 6):
+    print()
     userInput = input("Who's statistics would you like to access? (Type 'done' to exit) ")
-
+    print()
+    
     if userInput in players:
         menuOption = Menu.mainMenu()
 
         if menuOption == 1:
             menuOption = Menu.zoneMenu1()
+            print()
 
             if menuOption == 1:
                 Menu.printFGp2PT(players[userInput])
@@ -43,6 +46,7 @@ while(userInput.lower() != "done" and menuOption != 6):
         
         elif menuOption == 2:
             menuOption = Menu.zoneMenu2()
+            print()
 
             if menuOption == 1:
                 Menu.printZone2PT(players[userInput])
@@ -57,6 +61,7 @@ while(userInput.lower() != "done" and menuOption != 6):
 
         elif menuOption == 3:
             menuOption = Menu.zoneMenu1()
+            print()
 
             if menuOption == 1:
                 Menu.printEFGp2PT(players[userInput])
@@ -77,12 +82,14 @@ while(userInput.lower() != "done" and menuOption != 6):
             Menu.printAllZones(players[userInput])
             print()
             Menu.printAllEFGp(players[userInput])
+            print()
 
         elif menuOption == 5:
             break            
             
     else:
-        print("This player is not in the database. Enter anything to continue ")
+        print("This player is not in the database.")
+        print()
     
     menuOption = 0
 
