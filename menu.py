@@ -7,7 +7,8 @@ class Menu():
         print("2) Attempted Zone Percentage")
         print("3) Effective Field Goal Percentage")
         print("4) Everything")
-        print("5) Back")
+        print("5) New Player")
+        print("6) Quit")
         return int(input("Please enter a number to choose: "))
 
     # asks user which zone they want their stats for
