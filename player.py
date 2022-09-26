@@ -110,6 +110,21 @@ class Player():
         self.zone3PT = self.zoneC3 + self.zoneNC3
 
     # getter methods
+    def getFGp2PT(self):
+        return self.fgp2PT
+
+    def getFGp3PT(self):
+        return self.fgp3PT
+
+    def getFGpC3(self):
+        return self.fgpC3
+
+    def getFGpNC3(self):
+        return self.fgpNC3
+
+    def getFGp(self):
+        return self.fgpNC3
+    
     def getZone2PT(self):
         return self.zone2PT
     
@@ -133,6 +148,9 @@ class Player():
 
     def getEFGpNC3(self):
         return self.eFGpNC3
+
+    def getEFGp(self):
+        return self.eFGp
         
 
 
