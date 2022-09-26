@@ -32,7 +32,7 @@ while(quit == False):   # while user hasn't quit
         userInput = input("Who's statistics would you like to access? (Type 'done' to exit): ").upper()
         print()
 
-        if(userInput.lower() == "done"):
+        if(userInput.lower() == "done"):    # if user is done, quit
             quit = True
 
         else:
@@ -41,13 +41,14 @@ while(quit == False):   # while user hasn't quit
                 print()
                 userInput = input("Who's statistics would you like to access? (Type 'done' to exit): ").upper()
                 print()
-                if(userInput.lower() == "done"):
+                if(userInput.lower() == "done"):    # if user is done, quit
                     quit = True
 
 
-            menuOption = int(float(Menu.playerStatsScreen()))
+            menuOption = int(float(Menu.playerStatsScreen()))   # options for stats
             print()
 
+            # please refer to menu.py for descriptions of choices and methods
             if menuOption == 1:
                 menuOption = int(float(Menu.zoneMenu1()))
                 print()
@@ -116,7 +117,7 @@ while(quit == False):   # while user hasn't quit
             elif menuOption == 7:
                 quit = True
             
-
+    # display players
     elif mainMenuOption == 2:
         print()
         print("Here is a list of the players in our current database:")
@@ -125,5 +126,7 @@ while(quit == False):   # while user hasn't quit
             print(x)
         
         print()
+
+    # quit
     elif mainMenuOption == 3:
         quit = True
