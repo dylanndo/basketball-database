@@ -26,6 +26,7 @@ while(userInput.lower() != "done" and menuOption != 6):
     
     if userInput in players:
         menuOption = Menu.mainMenu()
+        print()
 
         if menuOption == 1:
             menuOption = Menu.zoneMenu1()
