@@ -12,25 +12,36 @@ class Player():
         self.attempted2PT = 0
         self.attemptedC3 = 0
         self.attemptedNC3 = 0
+        self.attempted3PT = 0
         self.attempted = 0
 
         # count of made shots
         self.made2PT = 0
         self.madeC3 = 0
         self.madeNC3 = 0
+        self.made3PT = 0
         self.made = 0
 
         # percentage of shots taken
         self.zone2PT = 0.0
+        self.zone3PT = 0.0    #C3 + NC3
         self.zoneC3 = 0.0
         self.zoneNC3 = 0.0
-        self.zone3 = 0.0    #C3 + NC3
+
+        # field goal percentage
+        self.fgp2PT = 0.0
+        self.fgp3PT = 0.0
+        self.fgpC3 = 0.0
+        self.fgpNC3 = 0.0
+        self.fgp = 0.0
 
         # effective field goal percentage
         self.eFGp2PT = 0.0
+        self.eFGp3PT = 0.0    #C3 + NC3
         self.eFGpC3 = 0.0
         self.eFGpNC3 = 0.0
-        self.eFGp3 = 0.0    #C3 + NC3
+        self.eFGp = 0.0
+
 
     # extracts data from given row in CSV File
     def addShot(self, row):
@@ -50,10 +61,12 @@ class Player():
 
             else:   # 22ft and beyond from the corner = corner three
                 self.attemptedC3 += 1  # +1 to corner 3 attempt
+                self.attempted3PT += 1  # +1 to 3 attempt
                 self.attempted += 1 # +1 to total attempt
 
-                if(int(row[3]) == 1):   # +1 to corner 3 and shot made
-                    self.madeC3 += 1    
+                if(int(row[3]) == 1):   # +1 to corner 3, 3 made, shot made
+                    self.madeC3 += 1   
+                    self.made3PT += 1 
                     self.made += 1
 
                 self.updateZones() # update zones after new shot attempt
@@ -76,10 +89,12 @@ class Player():
 
             else:   # 23.75ft and beyond from the arc = non corner three
                 self.attemptedNC3 += 1  # +1 to non corner 3 attempt
+                self.attempted3PT += 1  # +! to 3 attempt
                 self.attempted += 1 # +1 to total attempt
 
-                if(int(row[3]) == 1):   # +1 to non corner 3 made and shot made
+                if(int(row[3]) == 1):   # +1 to non corner 3 made, 3 made, and shot made
                     self.madeNC3 += 1
+                    self.made3PT += 1 
                     self.made += 1    
                 
                 self.updateZones() # update zones after new shot attempt
@@ -92,6 +107,32 @@ class Player():
         self.zone2PT = Stats_Calculator.updateZone(self.attempted2PT, self.attempted) # update 2PT zone
         self.zoneC3 = Stats_Calculator.updateZone(self.attemptedC3, self.attempted) # update C3 zone
         self.zoneNC3 = Stats_Calculator.updateZone(self.attemptedNC3, self.attempted) # update NC3 zone
+        self.zone3PT = self.zoneC3 + self.zoneNC3
+
+    # getter methods
+    def getZone2PT(self):
+        return self.zone2PT
+    
+    def getZone3PT(self):
+        return self.zone3PT
+
+    def getZoneC3(self):
+        return self.zoneC3
+
+    def getZoneNC3(self):
+        return self.zoneNC3
+
+    def getEFGp2PT(self):
+        return self.eFGp2PT
+
+    def getEFGp3PT(self):
+        return self.eFGp3PT
+
+    def getEFGpC3(self):
+        return self.eFGpC3
+
+    def getEFGpNC3(self):
+        return self.eFGpNC3
         
 
 
