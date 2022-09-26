@@ -56,6 +56,9 @@ class Player():
                 
                 self.updateZones() # update zones after new shot attempt
                 self.eFGp2PT = Stats_Calculator.updateEFGP(self.made2PT, self.attempted2PT)   # update 2PT EFG%
+                self.eFGp = Stats_Calculator.updateEFGP(self.made, self.made3PT, self.attempted)    # update overall EFG%
+                self.fgp2PT = self.eFGp2PT  # update 2PT FG%
+                self.fgp = Stats_Calculator.updateFGP(self.made, self.attempted)   # update  overall FG%
                 
                 self.two.append(row)    # add data to two pointers list 
 
@@ -71,6 +74,9 @@ class Player():
 
                 self.updateZones() # update zones after new shot attempt
                 self.eFGpC3 = Stats_Calculator.update3EFGP(self.madeC3, self.attemptedC3)   # update C3 EFG%
+                self.eFGp = Stats_Calculator.updateEFGP(self.made, self.made3PT, self.attempted)    # update overall EFG%
+                self.fgp3PT = Stats_Calculator.updateFGP(self.made3PT, self.attempted3PT)   # update 3PT FG%
+                self.fgp = Stats_Calculator.updateFGP(self.made, self.attempted)   # update  overall FG%
                 
                 self.cornerThree.append(row)    # add data to corner 3 list 
             
@@ -85,6 +91,10 @@ class Player():
                 
                 self.updateZones() # update zones after new shot attempt
                 self.eFGp2PT = Stats_Calculator.updateEFGP(self.made2PT, self.attempted2PT)   # update 2PT EFG%
+                self.eFGp = Stats_Calculator.updateEFGP(self.made, self.made3PT, self.attempted)    # update overall EFG%
+                self.fgp2PT = self.eFGp2PT  # update 2PT FG%
+                self.fgp = Stats_Calculator.updateFGP(self.made, self.attempted)   # update  overall FG%
+                
                 self.two.append(row)    # add data to two pointers list 
 
             else:   # 23.75ft and beyond from the arc = non corner three
@@ -99,6 +109,9 @@ class Player():
                 
                 self.updateZones() # update zones after new shot attempt
                 self.eFGpNC3 = Stats_Calculator.update3EFGP(self.madeNC3, self.attemptedNC3)   # update NC3 EFG%
+                self.eFGp = Stats_Calculator.updateEFGP(self.made, self.made3PT, self.attempted)    # update overall EFG%
+                self.fgp3PT = Stats_Calculator.updateFGP(self.made3PT, self.attempted3PT)   # update 3PT FG%
+                self.fgp = Stats_Calculator.updateFGP(self.made, self.attempted)   # update  overall FG%
 
                 self.nonCornerThree.append(row)    # add data to non corner 3 list
     
