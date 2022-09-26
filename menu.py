@@ -2,13 +2,22 @@ class Menu():
     # main menu
 
     def mainMenu():
+        print("Welcome to Dylan Do's Basketball Database! Here are your options.")
+        print("1) Access Player Stats")
+        print("2) List players in Database")
+        print("3) Quit")
+        return int(input("Please enter a number to get started: "))
+    
+    # ask user what stat they would like to access
+    def playerStatsScreen():
         print("What would you like to access?")
         print("1) Field Goal Percentage")
         print("2) Attempted Zone Percentage")
         print("3) Effective Field Goal Percentage")
         print("4) Everything")
         print("5) New Player")
-        print("6) Quit")
+        print("6) Go back to Main Menu")
+        print("7) Quit")
         return int(input("Please enter a number to choose: "))
 
     # asks user which zone they want their stats for
