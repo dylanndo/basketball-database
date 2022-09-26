@@ -4,7 +4,7 @@ class Stats_Calculator():
         return float(zoneAttempted) / totalAttempted
 
     # calculates effective field goal percentage in given 2 pt zone
-    def updateEFGP(madeShots, attemptedShots):
+    def update2EFGP(madeShots, attemptedShots):
         return float(madeShots) / attemptedShots
 
     # calculates effective field goal percentage in given 3 pt zone
