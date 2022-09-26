@@ -18,7 +18,7 @@ class Menu():
         print("5) New Player")
         print("6) Go back to Main Menu")
         print("7) Quit")
-        return int(input("Please enter a number to choose: "))
+        return input("Please enter a number to choose: ")
 
     # asks user which zone they want their stats for
     def zoneMenu1():
@@ -29,7 +29,7 @@ class Menu():
         print("4) Non Corner Three")
         print("5) Overall")
         print("6) Everything")
-        return int(input("Please enter a number to choose: "))
+        return input("Please enter a number to choose: ")
 
     def zoneMenu2():
         print("Which zone would you like to access?")
@@ -38,7 +38,7 @@ class Menu():
         print("3) Corner Three")
         print("4) Non Corner Three")
         print("5) Everything")
-        return int(input("Please enter a number to choose: "))
+        return input("Please enter a number to choose: ")
 
 
     # prints field goal percentage
