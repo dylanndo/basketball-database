@@ -75,6 +75,7 @@ class Player():
                 self.updateZones() # update zones after new shot attempt
                 self.eFGpC3 = Stats_Calculator.update3EFGP(self.madeC3, self.attemptedC3)   # update C3 EFG%
                 self.eFGp = Stats_Calculator.updateEFGP(self.made, self.made3PT, self.attempted)    # update overall EFG%
+                self.fgpC3 = Stats_Calculator.updateFGP(self.madeC3, self.attemptedC3)   # update C3 FG%
                 self.fgp3PT = Stats_Calculator.updateFGP(self.made3PT, self.attempted3PT)   # update 3PT FG%
                 self.fgp = Stats_Calculator.updateFGP(self.made, self.attempted)   # update  overall FG%
                 
@@ -110,6 +111,7 @@ class Player():
                 self.updateZones() # update zones after new shot attempt
                 self.eFGpNC3 = Stats_Calculator.update3EFGP(self.madeNC3, self.attemptedNC3)   # update NC3 EFG%
                 self.eFGp = Stats_Calculator.updateEFGP(self.made, self.made3PT, self.attempted)    # update overall EFG%
+                self.fgpNC3 = Stats_Calculator.updateFGP(self.madeNC3, self.attemptedNC3)   # update NC3 FG%
                 self.fgp3PT = Stats_Calculator.updateFGP(self.made3PT, self.attempted3PT)   # update 3PT FG%
                 self.fgp = Stats_Calculator.updateFGP(self.made, self.attempted)   # update  overall FG%
 
