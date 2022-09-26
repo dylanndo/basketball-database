@@ -17,7 +17,8 @@ class Menu():
         print("2) Three Pointers")
         print("3) Corner Three")
         print("4) Non Corner Three")
-        print("5) Everything")
+        print("5) Overall")
+        print("6) Everything")
         return int(input("Please enter a number to choose: "))
 
     def zoneMenu2():
@@ -26,9 +27,9 @@ class Menu():
         print("2) Three Pointers")
         print("3) Corner Three")
         print("4) Non Corner Three")
-        print("5) Overall")
-        print("6) Everything")
+        print("5) Everything")
         return int(input("Please enter a number to choose: "))
+
 
     # prints field goal percentage
     def printFGp2PT(player):
