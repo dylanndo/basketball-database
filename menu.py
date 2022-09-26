@@ -79,9 +79,9 @@ class Menu():
     def printEFGp(player):
         print("Effective field goal percentage (overall): " + str(player.getEFGp()))
 
-    def printAllEFGp(self, player):
-        self.printEFGp2PT(player)
-        self.printEFGp3PT(player)
-        self.printEFGpC3(player)
-        self.printEFGpNC3(player)
-        self.printEFGp(player)
+    def printAllEFGp(player):
+        Menu.printEFGp2PT(player)
+        Menu.printEFGp3PT(player)
+        Menu.printEFGpC3(player)
+        Menu.printEFGpNC3(player)
+        Menu.printEFGp(player)
